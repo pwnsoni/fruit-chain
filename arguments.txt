@@ -2,7 +2,13 @@ Add Participant -     ["Grower", "Red Apple", "gra123", "C 4"]
 
 Add Participant -     ["Distributor", "Red Apple", "dra123", "D 4"]
 
+Add Participant -     ["Whole Seller", "Red Apple", "wra123", "D 4"]
+
+Add Participant -     ["Retailer", "Red Apple", "rra123", "D 4"]
+
 Create Fruit -        ["ra1", "Apple", "100", "Red Apple", "gra123", "26/04/2020"]
+
+Onership transfer-    ["ra1", "dra123"]
 
 retrieveHistory is working perfectly fine
 
