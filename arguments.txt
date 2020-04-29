@@ -1,14 +1,173 @@
 Add Participant -     ["Grower", "Red Apple", "gra123", "C 4"]
 
+["Wholesaler", "Red Apple", "wra123", "Panipat, Haryana"]
+
 Add Participant -     ["Distributor", "Red Apple", "dra123", "D 4"]
 
 Add Participant -     ["Whole Seller", "Red Apple", "wra123", "D 4"]
 
 Add Participant -     ["Retailer", "Red Apple", "rra123", "D 4"]
 
-Create Fruit -        ["ra1", "Apple", "100", "Red Apple", "gra123", "26/04/2020"]
+Create Fruit -        ["ra1", "Apple", "100 Kg", "gra123", "gra123", "Kotagarh, HP", "26/04/2020", "26/04/2020"]        Friit 1
+Friit 2                 ["ra2", "Apple", "100 Kg", "gra223", "gra223", "Chakrata, Uttarakhand", "26/04/2020", "26/04/2020"]
+
+ownershipTransfer
+gra123 to wra123  ["ra1", "wra123", "Panipat, Haryana", "27/04/2020"]
+wra123 to dra123   ["ra1", "dra123", "Azadpur, Delhi", "28/04/2020"]
+dra123 to rra123   ["ra1", "rra123", "Delhi, Delhi", "29/04/2020"]
+rra123to customer   ["ra1", "cust", "Delhi, Delhi", "30/04/2020"]
+
 
 Onership transfer-    ["ra1", "dra123"]
 
 retrieveHistory is working perfectly fine
+
+
+*****************************************************************
+Add Participant Transaction Terminal Outputs
+
+
+addParticipant contract initiated
+added participant
+{ partcipantType: 'Grower',
+  orgName: 'Red Apple',
+  licenseNo: 'gra123',
+  address: 'Kotagarh, HP' }    
+
+addParticipant contract initiated
+added participant
+{ partcipantType: 'Grower',
+  orgName: 'Red Apple',
+  licenseNo: 'gra223',
+  address: 'Chakrata, Uttarakhand' }
+
+addParticipant contract initiated
+added participant
+{ partcipantType: 'Wholesaler',
+  orgName: 'Red Apple',
+  licenseNo: 'wra123',
+  address: 'Panipat, Haryana' }
+
+addParticipant contract initiated
+added participant
+{ partcipantType: 'Wholesaler',
+  orgName: 'Red Apple',
+  licenseNo: 'wra223',
+  address: 'Gwalior, MP' }
+
+
+addParticipant contract initiated
+added participant
+{ partcipantType: 'Distributor',
+  orgName: 'Red Apple',
+  licenseNo: 'dra123',
+  address: 'Azadpur, Delhi' }
+  
+addParticipant contract initiated
+added participant
+{ partcipantType: 'Distributor',
+  orgName: 'Red Apple',
+  licenseNo: 'dra223',
+  address: 'Amaravati, Maharashtra' }
+
+
+addParticipant contract initiated
+added participant
+{ partcipantType: 'Retailer',
+  orgName: 'Red Apple',
+  licenseNo: 'rra123',
+  address: 'Delhi, Delhi' }
+
+
+addParticipant contract initiated
+added participant
+{ partcipantType: 'Retailer',
+  orgName: 'Red Apple',
+  licenseNo: 'rra223',
+  address: 'Hyderabad, Telangana' }
+
+
+Add Participant Transaction Terminal Outputs ends
+*****************************************************************
+
+******************************
+Create Fruit
+
+created fruit
+{ fruitId: 'ra2',
+  name: 'Apple',
+  qty: '100 Kg',
+  growerName: 'gra223',
+  currentOwner: 'gra223',
+  currentLocationGLN: 'Chakrata, Uttarakhand',
+  dateOfPlucking: '26/04/2020',
+  dateOfTransfer: '26/04/2020' }
+
+Create Fruit Ends
+******************************
+
+*****************************************
+ownership Tramsfer 
+
+
+
+ownershipTransfer contract initiated
+transferred ownership from gra223to wra223
+
+ownershipTransfer contract initiated
+transferred ownership from wra223to dra223
+
+ownershipTransfer contract initiated
+transferred ownership from dra223to rra223
+
+ownershipTransfer contract initiated
+transferred ownership from rra223to cust
+
+ownership transfer ends
+**********************************************
+
+
+**************************************************
+retrieveHistoryForFruitId contract initiated
+getting history for fruitId: ra2
+[ { fruitId: 'ra2',
+    name: 'Apple',
+    qty: '100 Kg',
+    growerName: 'gra223',
+    currentOwner: 'gra223',
+    currentLocationGLN: 'Chakrata, Uttarakhand',
+    dateOfPlucking: '26/04/2020',
+    dateOfTransfer: '26/04/2020' },
+  { currentLocationGLN: 'Gwalior, MP',
+    currentOwner: 'wra223',
+    dateOfPlucking: '26/04/2020',
+    dateOfTransfer: '27/04/2020',
+    fruitId: 'ra2',
+    growerName: 'gra223',
+    name: 'Apple',
+    qty: '100 Kg' },
+  { currentLocationGLN: 'Amaravati, Maharashtra',
+    currentOwner: 'dra223',
+    dateOfPlucking: '26/04/2020',
+    dateOfTransfer: '28/04/2020',
+    fruitId: 'ra2',
+    growerName: 'gra223',
+    name: 'Apple',
+    qty: '100 Kg' },
+  { currentLocationGLN: 'Hyderabad, Telangana',
+    currentOwner: 'rra223',
+    dateOfPlucking: '26/04/2020',
+    dateOfTransfer: '29/04/2020',
+    fruitId: 'ra2',
+    growerName: 'gra223',
+    name: 'Apple',
+    qty: '100 Kg' } ]
+
+*****************************************************
+
+
+For ra1:
+
+
+
 
